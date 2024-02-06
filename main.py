@@ -1,26 +1,18 @@
-#Завдання 1
-# rad = input("Введіть рядок на перевірку чи є він паліндромом: ")
-#
-# rad2 = rad.replace(" ", "").lower()
-# print(rad2)
-#
-# rad3 = rad2[::-1]
-#
-# if rad2 == rad3:
-#     print("Ваш ряд паліндром")
-# else:
-#     print("Ваш ряд не паліндром")
+rad = input("Введіть вираз наприклад, 23+12: ")
 
-#Завдання 2
-#Не зрозумів завдання
+num1, operator, num2 = rad.split()
+num1, num2 = float(num1), float(num2)
 
-#Завдання 3
-simvl1 = "."
-simvl2 = "!"
-simvl3 = "?"
-rad = input("Введіть рядок: ")
-tret = rad.count(simvl3)
-vtor = rad.count(simvl2)
-perv = rad.count(simvl1)
-col_rech = tret+vtor+perv
-print(f"Кількість речень в вашому рядку така: {col_rech}")
+if operator == '+':
+        result = num1 + num2
+elif operator == '-':
+        result = num1 - num2
+elif operator == '*':
+        result = num1 * num2
+elif operator == '/':
+    if num2 == 0:
+            print("Помилка: ділення на 0")
+    result = num1 / num2
+
+print(f"Результат виразу {rad} дорівнює {result}")
+
